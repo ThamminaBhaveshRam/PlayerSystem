@@ -5,6 +5,7 @@ class Player
     // Variables (Data)
     public string name;
     public int health;
+    public int maxHealth = 100;
 
     // Constructor
     public Player(string playerName, int playerHealth)
@@ -25,6 +26,9 @@ class Player
     public void Heal(int amount)
     {
         health = health + amount;
+        if (health > maxHealth){
+          health = 100;
+         }
         Console.WriteLine(name + " healed: " + amount);
         Console.WriteLine("Current Health: " + health);
     }
