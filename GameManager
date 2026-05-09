@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    void Start()
+    {
+        // Create Player objects
+        Player p1 = new Player("Ram", 100);
+        Player p2 = new Player("Raju", 80);
+
+        p1.ShowInfo();
+
+        p1.TakeDamage(40);
+        p2.TakeDamage(20);
+
+        p1.Heal(30);
+        p2.Heal(50);
+
+        p1.ShowInfo();
+        p2.ShowInfo();
+    }
+}
