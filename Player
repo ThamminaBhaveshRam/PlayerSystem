@@ -1,0 +1,37 @@
+using System;
+
+class Player
+{
+    // Variables (Data)
+    public string name;
+    public int health;
+
+    // Constructor
+    public Player(string playerName, int playerHealth)
+    {
+        name = playerName;
+        health = playerHealth;
+    }
+
+    // Method: Take Damage
+    public void TakeDamage(int damage)
+    {
+        health = health - damage;
+        Console.WriteLine(name + " took damage: " + damage);
+        Console.WriteLine("Remaining Health: " + health);
+    }
+
+    // Method: Heal
+    public void Heal(int amount)
+    {
+        health = health + amount;
+        Console.WriteLine(name + " healed: " + amount);
+        Console.WriteLine("Current Health: " + health);
+    }
+
+    // Show Info
+    public void ShowInfo()
+    {
+        Console.WriteLine("Player: " + name + " | Health: " + health);
+    }
+}
